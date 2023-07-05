@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,300;1,600&display=swap');
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Overpass', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--White);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--Dark-Gray);
+}
+
+/* utilities */
+.container {
+  max-width: 1440px;
+  margin: 0 10%;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--White);
+}
+
+
+/* header */
+.header {
+  height: 90vh;
+  background: url(images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--White);
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 4rem;
+}
+
+.navbar a:hover {
+  color: var(--Dark-Gray);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.showcase {
+  margin-top: 150px;
+}
+
+.showcase p {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 100;
+  width: 550px;
+  border: 2px solid var(--White);
+  text-align: start;
+  padding: 1rem 4rem 1rem 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:990px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width:768px) {
+  .header {
+    height: 100vh;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    right: 0;
+    transition: .2s linear;
+    display: none;
+    background: var(--Black);
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 4rem;
+
+  }
+
+  .navbar.active {
+    display: block;
+    transition: .2s linear;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    transition: .2s linear;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+    transition: .2s linear;
+  }
+
+  /* showcase */
+  .showcase {
+    margin-top: 130px;
+
+  }
+
+  .showcase p {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 100;
+    width: 100%;
+    border: 2px solid var(--White);
+    text-align: start;
+    padding: 1rem 4rem 1rem 3rem;
+  }
+}
+
+@media (max-width:450px) {
+  html {
+    font-size: 50%;
+  }
+}
